@@ -88,8 +88,10 @@ function App() {
   // set total qty & total price
   const countTotal = () => {
     let qtyTotal = 0, priceTotal = 0;
-    data?.map(item => qtyTotal += parseInt(item.qty));
-    data?.map(item => priceTotal += parseInt(item.total));
+    data?.map((item) => {
+      qtyTotal += parseInt(item.qty);
+      priceTotal += parseInt(item.total);
+    });
     setCountPriceT(priceTotal);
     setCountQty(qtyTotal);
   }
